@@ -25,6 +25,7 @@ class ContactFormController extends Controller
     public function create()
     {
         //
+        return view('contact.create');
     }
 
     /**
@@ -36,6 +37,9 @@ class ContactFormController extends Controller
     public function store(Request $request)
     {
         //
+        DB::transaction(function () {
+
+        });
     }
 
     /**
