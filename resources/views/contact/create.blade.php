@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="{{route("contact.create")}}" method="post">
+    <form action="{{route("contact.store")}}" method="post">
         @csrf
         <p>name</p>
         <input type="text" name="your_name"><br>
