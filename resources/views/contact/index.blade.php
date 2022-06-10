@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    index
+    <a href="{{route('contact.create')}}">new</a>
 </body>
 </html>
