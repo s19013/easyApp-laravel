@@ -37,9 +37,22 @@ class ContactFormController extends Controller
     public function store(Request $request)
     {
         //
-        DB::transaction(function () {
+        $your_name = $request->input('your_name');
+        $email     = $request->input('email');
+        $url       = $request->input('url');
+        $gender    = $request->input('gender');
+        $age       = $request->input('age');
+        $contact   = $request->input('contact');
 
-        });
+
+
+        try {
+            DB::transaction(function () {
+
+            });
+        } catch (\Throwable $th) {
+
+        }
     }
 
     /**
