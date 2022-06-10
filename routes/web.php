@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactFormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//'middleware' => 'auth'でログイン済み
+//'prefix' => 'contact'で/contact/をまとめる
+// Route::middleware(['auth', 'second'])->group(function () {
+
+// });
+Route::prefix('contact')->group(function () {
+    Route::get('index',[ContactFormController::class, 'index'])->name('contact.index');
+
+});
+// Route::group(['prefix' => 'contact','middleware' => 'auth'],function (){
+
+// });
+
+
