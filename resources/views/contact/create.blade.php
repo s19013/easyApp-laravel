@@ -7,6 +7,13 @@
     <title>Document</title>
 </head>
 <body>
+    @if ($errors->any())
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{$error}}</li>
+            @endforeach
+        </ul>
+    @endif
     <form action="{{route("contact.store")}}" method="post">
         @csrf
         <p>name</p>
